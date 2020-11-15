@@ -114,7 +114,7 @@ namespace WpfApp1
                         tmp += Convert.ToDouble(v[i, j + 1]);
                         col++;
                     }
-                    a[i, j] = Convert.ToString(tmp / col);
+                    a[i, j] = Convert.ToString(Math.Round(tmp / col, 2));
                 }
             Dg2.ItemsSource = makedt(a).DefaultView;
             double sum = 0;
@@ -125,7 +125,7 @@ namespace WpfApp1
                     sum += Convert.ToDouble(a[i, j]);
                 }
             }
-            Tb1.Text = Convert.ToString(sum);
+            Tb1.Text = Convert.ToString(Math.Round(sum,2));
         }
 
         private void Dg1_SelectionChanged(object sender, SelectionChangedEventArgs e)

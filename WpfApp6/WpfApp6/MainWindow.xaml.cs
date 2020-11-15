@@ -37,7 +37,7 @@ namespace WpfApp6
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            
         }
 
         private void Bt1_Click(object sender, RoutedEventArgs e)
@@ -117,5 +117,12 @@ namespace WpfApp6
             
         }
 
+        private void Tb1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if(Tb1.Text == "Введите размер массива.") 
+            {
+                Tb1.Text = "";
+            }
+        }
     }
 }
